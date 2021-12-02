@@ -12,5 +12,4 @@ public class Sushi extends Food {
     public String getPrint() {
         return "\uD83C\uDF63 (" + this.print + ")";
     }
-
 }

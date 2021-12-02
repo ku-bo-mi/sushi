@@ -24,6 +24,7 @@ public class Food {
 
 
     public Food(String name, int calorie, int price, String print){
+        // author kubomi
         this.name = name;
         this.calorie = calorie;
         this.price = price;

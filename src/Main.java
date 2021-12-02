@@ -33,8 +33,6 @@ public class Main {
 
         System.out.println();
 
-
-
         //oaiso
         int totalBill = 0; //お会計
         int totalCalorie = 0; //総カロリー
@@ -50,6 +48,5 @@ public class Main {
         System.out.println("\nご利用ありがとうございました。");
         System.out.println("\uD83D\uDCB0 お会計: " + totalBill + " 円");
         System.out.println("\uD83D\uDCAA 総カロリー: " + totalCalorie + "kCal");
-
     }
 }

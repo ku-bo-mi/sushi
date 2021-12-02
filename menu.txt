@@ -1,0 +1,6 @@
+maguro, 140, 220, 🐟, sushi
+ika, 120, 110, 🦑, sushi
+ebi, 110, 110, 🦐, sushi
+beer, 300, 600, 🍺, drink
+sake, 200, 700, 🍶, drink
+agari, 0, 400, 🍵, drink

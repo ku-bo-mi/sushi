@@ -1,0 +1,8 @@
+beer, 2
+maguro, 1
+ika, 2
+ebi, 1
+sake, 1
+ika, 1
+maguro, 2
+agari, 2

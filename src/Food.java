@@ -29,6 +29,7 @@ public class Food {
         this.price = price;
         this.print = print;
         this.id = UUID.randomUUID();
+        // this is kei
     }
 
     public String getName() {

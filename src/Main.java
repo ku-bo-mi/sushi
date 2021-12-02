@@ -42,6 +42,7 @@ public class Main {
                 totalBill += food.getPrice();
                 totalCalorie += food.getCalorie();
                 System.out.println(food.name + ":\t"  + food.id.toString());
+                // this is kubomi
             }
         }
         //print

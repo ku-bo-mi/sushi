@@ -10,44 +10,35 @@ public class Main {
 
         //load food catalog from the text file.
         HashMap<String, Food> inputCatalog = CatalogFileReader.readCatalog("menu.txt");
+
         //create FoodCatalog instance with the given hashmap
         FoodCatalog foodCatalog = new FoodCatalog(inputCatalog);
         System.out.println(foodCatalog);
 
+        //Create Kitchen instance with the given FoodCatalog
+        Kitchen sushiKitchen = new Kitchen(foodCatalog);
+
+        //Create Table instance
+        Table table1 = new Table(1, 2);
+
         //load orders from the order file.
-        ArrayList<OrderItem> orders = OrderFileReader.readOrder("order.txt");
+        ArrayList<OrderItem> orderItems = OrderFileReader.readOrder("order.txt");
+
         //create Order instance with the given list of orders.
-        Order order = new Order(orders);
-        order.printOrders();
+        Order order = new Order(orderItems);
 
-        //Start making sushi
-        System.out.println("\nへい、おまち！");
+        table1.setServedFood(sushiKitchen.cook(order));
+        table1.printFood();
+        table1.printID();
+        table1.oaiso();
 
-        //print food based on orders
-        for (OrderItem orderItem : order.getOrders()){
-            for (int j = 0; j < orderItem.getCount(); j++){
-                System.out.print(foodCatalog.getItemByName(orderItem.getName()).getPrint() + "  ");
-            }
-            System.out.println();
-        }
+        Table table2 = new Table(2, 3);
+        table2.setServedFood(sushiKitchen.cook(order));
+        table2.setServedFood(sushiKitchen.cook(order));
+        table2.printFood();
+        table2.printID();
+        table2.oaiso();
 
-        System.out.println();
 
-        //oaiso
-        int totalBill = 0; //お会計
-        int totalCalorie = 0; //総カロリー
-        for (OrderItem orderItem : order.getOrders()){
-            for (int j = 0; j < orderItem.getCount(); j++){
-                Food food = foodCatalog.getItemByName(orderItem.getName());
-                totalBill += food.getPrice();
-                totalCalorie += food.getCalorie();
-                System.out.println(food.name + ":\t"  + food.id.toString());
-                // this is kubomi
-            }
-        }
-        //print
-        System.out.println("\nご利用ありがとうございました。");
-        System.out.println("\uD83D\uDCB0 お会計: " + totalBill + " 円");
-        System.out.println("\uD83D\uDCAA 総カロリー: " + totalCalorie + "kCal");
     }
 }

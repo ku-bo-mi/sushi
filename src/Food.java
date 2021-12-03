@@ -20,6 +20,10 @@ public class Food {
      * print text of food
      */
     protected String print;
+
+    /**
+     * unique ID of food
+     */
     protected UUID id;
 
 
@@ -36,12 +40,24 @@ public class Food {
         return name;
     }
 
+    public int getCalorie() {
+        return calorie;
+    }
+
     public int getPrice() {
         return price;
     }
 
     public String getPrint() {
         return print;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public Food copy(){
+        return new Food(this.name, this.calorie, this.price, this.print);
     }
 
     @Override

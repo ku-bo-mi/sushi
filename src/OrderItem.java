@@ -22,6 +22,6 @@ public class OrderItem {
 
     @Override
     public String toString() {
-        return name + " x " + count;
+        return name + "\tx " + count;
     }
 }

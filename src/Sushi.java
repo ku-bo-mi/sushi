@@ -10,6 +10,6 @@ public class Sushi extends Food {
 
     @Override
     public String getPrint() {
-        return "\uD83C\uDF63 (" + this.print + ")";
+        return "\uD83C\uDF63" + this.print;
     }
 }

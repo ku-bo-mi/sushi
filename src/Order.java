@@ -18,7 +18,7 @@ public class Order {
     }
 
     public void printOrders(){
-        System.out.println("\nご注文ありがとうございます。");
+        System.out.println("\nご注文内容");
         for (OrderItem order : this.orders){
             System.out.println(order);
         }

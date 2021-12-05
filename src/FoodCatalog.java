@@ -16,7 +16,6 @@ public class FoodCatalog {
 
     public FoodCatalog(HashMap<String, Food> inputCatalog){
         //this.catalog = inputCatalog;
-        this.catalog = new HashMap<String, Food>();
         this.catalog = inputCatalog;
         /*
         System.out.println("foodcatalog" + catalog);

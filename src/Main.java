@@ -13,7 +13,9 @@ public class Main {
 
         //create FoodCatalog instance with the given hashmap
         FoodCatalog foodCatalog = new FoodCatalog(inputCatalog);
-        System.out.println(foodCatalog);
+
+        //print menu from FoodCatalog
+        foodCatalog.printMenu();
 
         //Create Kitchen instance with the given FoodCatalog
         Kitchen sushiKitchen = new Kitchen(foodCatalog);

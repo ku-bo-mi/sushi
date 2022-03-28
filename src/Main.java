@@ -95,7 +95,7 @@ public class Main {
 
         sushiKitchen.cook(order1);
         */
-        
+
         /*
 
         String message = "ご注文の商品を入力してください > ";

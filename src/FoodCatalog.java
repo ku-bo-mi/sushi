@@ -26,6 +26,10 @@ public class FoodCatalog {
         return this.catalog.get(name);
     }
 
+    public String[] getKeys(){
+        return this.catalog.keySet().toArray(new String[0]);
+    }
+
     public void printMenu(){
         System.out.println("------ メニュー ------");
         for(String key :catalog.keySet()){
